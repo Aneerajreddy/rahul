@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rahul Reddy – Professional Cricketer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+       --primary:#0f2742;      /* deep navy */
+      --accent:#2c6ebf;       /* blue accent */
+      --muted:#717376d4;        /* light bg */
+      --card:#d2d7ddd4;         /* card bg */
+      --text:#1b1f23;         /* body text */
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--muted);color:var(--text);font-family:"Nunito",system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+
+    .resume{max-width:1100px;margin:32px auto;background:var(--card);display:grid;grid-template-columns:320px 1fr;border-radius:18px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.08)}
+    .left{background:#eaf1fb;padding:28px 24px;display:flex;flex-direction:column;gap:20px}
+    .right{background:#fff;}
+
+    .hero{background:var(--primary);color:#fff;padding:42px 48px}
+    .hero h1{margin:0;font-size:40px;letter-spacing:.5px}
+    .subtitle{opacity:.9;margin-top:6px;font-weight:600}
+
+    .photo{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:16px;box-shadow:0 6px 16px rgba(15,39,66,.25);background:#c9d9f5}
+    .section-title{margin:0 0 8px 0;font-size:18px;color:var(--primary);font-weight:800;letter-spacing:.3px}
+    .card{background:#f7fbff;border:1px solid #d9e7fb;border-radius:16px;padding:16px}
+    .mini{display:grid;grid-template-columns:28px 1fr;gap:10px;margin:10px 0}
+    .mini .icon{width:28px;height:28px;border-radius:7px;background:#dfeafb;display:grid;place-items:center;font-size:14px;color:var(--primary);font-weight:800}
+    .muted{color:#435469}
+
+    .content{padding:32px 48px;display:grid;grid-template-columns:1fr 1fr;gap:28px}
+    .block{padding:20px;border:1px solid #eef2f7;border-radius:16px;background:#fff}
+    .block h3{margin:0 0 10px 0;color:var(--primary);font-size:20px}
+    ul{margin:8px 0 0 18px;padding:0}
+    li{margin:6px 0}
+
+    .contact{display:flex;flex-direction:column;gap:10px}
+    .contact a{color:var(--text);text-decoration:none}
+    .contact a:hover{color:var(--accent)}
+
+    .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+    .tag{background:#edf4ff;color:#164a90;border:1px solid #d6e6ff;padding:6px 10px;border-radius:999px;font-size:12px;font-weight:700}
+
+    .footer{padding:18px 48px 42px;color:#5a6a7a}
+
+    .full-resume{padding:32px 48px}
+    .full-resume h3{color:var(--primary);margin-bottom:16px;font-size:22px}
+    .page-image{width:100%;margin-bottom:20px;border:1px solid #ccc;border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,.08)}
+
+    @media (max-width: 980px){
+      .resume{grid-template-columns:1fr}
+      .left{order:2}
+      .right{order:1}
+      .content{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <main class="resume" role="main">
+    <aside class="left">
+      <img class="photo" src="C:\Users\neera\OneDrive\Desktop\rahul\profile.jpg" alt="Rahul Reddy profile photo" />
+
+      <div class="card">
+        <h2 class="section-title">Crucial Details</h2>
+        <div class="mini"><div class="icon">🏠</div><div>
+          Swarna Residency, Flat 402, Madhapur, Hyderabad, Telangana 500081 (IN)
+        </div></div>
+        <div class="mini"><div class="icon">✉️</div><div>
+          <a href="mailto:a.rahulreddy31@gmail.com">a.rahulreddy31@gmail.com</a>
+        </div></div>
+        <div class="mini"><div class="icon">📞</div><div>
+          <a href="tel:+919848367135">+91 98483 67135</a>
+        </div></div>
+        <div class="mini"><div class="icon">🏏</div><div class="muted">
+          Batting: Left-hand middle-order &nbsp;•&nbsp; Bowling: Left-arm orthodox
+        </div></div>
+      </div>
+
+      <div class="card">
+        <h2 class="section-title">Affiliations</h2>
+        <ul>
+          <li>Hyderabad Cricket Association</li>
+          <li>Hyderabad Ranji Probables (last 3 seasons)</li>
+          <li>HCA U-25 & Hyderabad U-23 (State representation)</li>
+          <li>Osmania University – All India Inter University</li>
+          <li>Income Tax Hyderabad – 3 yrs</li>
+          <li>Deccan Chronicle – 3 yrs</li>
+        </ul>
+      </div>
+    </aside>
+
+    <section class="right">
+      <header class="hero">
+        <h1>Rahul Reddy</h1>
+        <div class="subtitle">Professional Cricketer</div>
+        <div class="tags" aria-label="Skills">
+          <span class="tag">Left-arm Orthodox</span>
+          <span class="tag">Middle-order Batter</span>
+          <span class="tag">Hyderabad</span>
+        </div>
+      </header>
+
+      <div class="content">
+        <article class="block" id="summary">
+          <h3>Professional Summary</h3>
+          <p>
+            I am a passionate and committed professional cricketer with over eight years of competitive experience, specializing as a left-hand middle-order batsman and left-arm orthodox bowler. I have represented the Hyderabad Cricket Association across multiple age categories, including U-23 and U-25, and have been part of the Hyderabad Ranji probables for the past three seasons. My career also includes playing for Income Tax Hyderabad, Deccan Chronicle, and Osmania University at the All India Inter University tournament. Recognized as a consistent wicket-taker in HCA leagues, I am driven to continually excel and aspire to represent my state and country at the highest level.
+          </p>
+        </article>
+
+        <article class="block" id="experience">
+          <h3>Experience</h3>
+          <ul>
+            <li>Hyderabad Ranji Probables – Last 3 seasons</li>
+            <li>Represented HCA U-25 – State level representation</li>
+            <li>Represented Hyderabad U-23 – State level representation</li>
+            <li>Income Tax Hyderabad – 3 years of professional cricket</li>
+            <li>Deccan Chronicle – 3 years of professional cricket</li>
+            <li>Osmania University – All India Inter University representation</li>
+            <li>Hyderabad Cricket Association</li>
+          </ul>
+        </article>
+
+        <article class="block" id="achievements">
+          <h3>Achievements</h3>
+          <ul>
+            <li>Leading wicket taker in HCA A Division leagues 2022–23 season</li>
+            <li>Leading wicket taker in 1st Division leagues for multiple seasons</li>
+            <li>Hyderabad Ranji probables for the last 3 seasons</li>
+            <li>Represented Hyderabad Cricket Association in various tournaments</li>
+          </ul>
+        </article>
+
+        <article class="block" id="accomplishments">
+          <h3>Accomplishments</h3>
+          <ul>
+            <li>2022–23 HCA 1st Division – 12 innings, 45 wickets – Leading Wicket Taker</li>
+            <li>2021–22 HCA 1st Division – 10 innings, 38 wickets</li>
+            <li>2020–21 HCA 1st Division – 8 innings, 32 wickets – Top Performer</li>
+            <li>2019–20 University Cricket – 5 innings, 18 wickets – Best Bowler (South Zone)</li>
+          </ul>
+        </article>
+
+        <article class="block" id="education">
+          <h3>Education</h3>
+          <ul>
+            <li>Osmania University, Hyderabad, Telangana — Engineering (2022)</li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="full-resume">
+       <img class="page-image" src="C:\Users\neera\OneDrive\Desktop\rahul\0.jpg" alt="Resume Page 1" />
+       <img class="page-image" src="C:\Users\neera\OneDrive\Desktop\rahul\1.jpg" alt="Resume Page 2" />
+       <img class="page-image" src="C:\Users\neera\OneDrive\Desktop\rahul\2.jpg" alt="Resume Page 3" />
+       <img class="page-image" src="C:\Users\neera\OneDrive\Desktop\rahul\3.jpg" alt="Resume Page 4" />
+       <img class="page-image" src="C:\Users\neera\OneDrive\Desktop\rahul\4.jpg" alt="Resume Page 5" />
+       <img class="page-image" src="C:\Users\neera\OneDrive\Desktop\rahul\5.jpg" alt="Resume Page 6" />
+       <img class="page-image" src="C:\Users\neera\OneDrive\Desktop\rahul\6.jpg" alt="Resume Page 7" />
+       <img class="page-image" src="C:\Users\neera\OneDrive\Desktop\rahul\7.jpg" alt="Resume Page 8" />
+       <img class="page-image" src="C:\Users\neera\OneDrive\Desktop\rahul\8.jpg" alt="Resume Page 9" />
+       <img class="page-image" src="C:\Users\neera\OneDrive\Desktop\rahul\9.jpg" alt="Resume Page 10" />
+       <img class="page-image" src="C:\Users\neera\OneDrive\Desktop\rahul\10.jpg" alt="Resume Page 11" />
+       <img class="page-image" src="C:\Users\neera\OneDrive\Desktop\rahul\11.jpg" alt="Resume Page 12" />
+       <img class="page-image" src="C:\Users\neera\OneDrive\Desktop\rahul\12.jpg" alt="Resume Page 13" />
+       <img class="page-image" src="C:\Users\neera\OneDrive\Desktop\rahul\13.jpg" alt="Resume Page 14" />
+      </div>
+
+      <div class="footer">
+        <small>
+      © Rahul Reddy — Cricket Résumé..
+        </small>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
