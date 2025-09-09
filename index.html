@@ -9,18 +9,18 @@
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
   <style>
     :root{
-       --primary:#0f2742;      /* deep navy */
-      --accent:#2c6ebf;       /* blue accent */
-      --muted:#717376d4;        /* light bg */
-      --card:#d2d7ddd4;         /* card bg */
-      --text:#1b1f23;         /* body text */
+      --primary:#0f2742;
+      --accent:#2c6ebf;
+      --muted:#717376d4;
+      --card:#d2d7ddd4;
+      --text:#1b1f23;
     }
     *{box-sizing:border-box}
     html,body{margin:0;padding:0;background:var(--muted);color:var(--text);font-family:"Nunito",system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
 
     .resume{max-width:1100px;margin:32px auto;background:var(--card);display:grid;grid-template-columns:320px 1fr;border-radius:18px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.08)}
     .left{background:#eaf1fb;padding:28px 24px;display:flex;flex-direction:column;gap:20px}
-    .right{background:#fff;}
+    .right{background:#abaaaa;}
 
     .hero{background:var(--primary);color:#fff;padding:42px 48px}
     .hero h1{margin:0;font-size:40px;letter-spacing:.5px}
@@ -39,25 +39,54 @@
     ul{margin:8px 0 0 18px;padding:0}
     li{margin:6px 0}
 
-    .contact{display:flex;flex-direction:column;gap:10px}
-    .contact a{color:var(--text);text-decoration:none}
-    .contact a:hover{color:var(--accent)}
-
     .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
     .tag{background:#edf4ff;color:#164a90;border:1px solid #d6e6ff;padding:6px 10px;border-radius:999px;font-size:12px;font-weight:700}
 
-    .footer{padding:18px 48px 42px;color:#5a6a7a}
+    .footer{padding:18px 48px 42px;color:#5a6a7a;text-align:center}
 
     .full-resume{padding:32px 48px}
-    .full-resume h3{color:var(--primary);margin-bottom:16px;font-size:22px}
-    .page-image{width:100%;margin-bottom:20px;border:1px solid #ccc;border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,.08)}
+    .full-resume h3{color:var(--primary);margin-bottom:16px;font-size:22px;text-align:center}
+    .page-image{width:100%;height:auto;max-width:100%;margin-bottom:20px;border:1px solid #ccc;border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,.08)}
 
-    @media (max-width: 980px){
-      .resume{grid-template-columns:1fr}
-      .left{order:2}
-      .right{order:1}
-      .content{grid-template-columns:1fr}
+    /* ===== Tablet (768px–980px) ===== */
+    @media (max-width: 980px) and (min-width: 768px) {
+      .resume { grid-template-columns: 250px 1fr; }
+      .hero h1 { font-size: 32px; }
+      .content { grid-template-columns: 1fr; }
     }
+
+    /* ===== Mobile (<768px) ===== */
+    @media (max-width: 767px) {
+      .resume{grid-template-columns:1fr}
+      .left, .right{padding:16px}
+      .hero{padding:24px;text-align:center}
+      .hero h1{font-size:26px}
+      .subtitle{font-size:14px}
+      .tags{justify-content:center}
+      .content{grid-template-columns:1fr;padding:16px}
+      .block{padding:16px}
+      .section-title{font-size:16px}
+      .block h3{font-size:18px}
+      .mini{grid-template-columns:24px 1fr}
+    }
+
+    /* Back to top button */
+    #backToTop {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      padding: 10px 14px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 18px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      display: none;
+      z-index: 1000;
+    }
+    #backToTop:hover { background: #1e5aa8; }
   </style>
 </head>
 <body>
@@ -155,28 +184,46 @@
       </div>
 
       <div class="full-resume">
-       <img class="page-image" src="src/0.jpg" alt="Resume Page 1" />
-       <img class="page-image" src="src/1.jpg" alt="Resume Page 2" />
-       <img class="page-image" src="src/2.jpg" alt="Resume Page 3" />
-       <img class="page-image" src="src/3.jpg" alt="Resume Page 4" />
-       <img class="page-image" src="src/4.jpg" alt="Resume Page 5" />
-       <img class="page-image" src="src/5.jpg" alt="Resume Page 6" />
-       <img class="page-image" src="src/6.jpg" alt="Resume Page 7" />
-       <img class="page-image" src="src/7.jpg" alt="Resume Page 8" />
-       <img class="page-image" src="src/8.jpg" alt="Resume Page 9" />
-       <img class="page-image" src="src/9.jpg" alt="Resume Page 10" />
-       <img class="page-image" src="src/10.jpg" alt="Resume Page 11" />
-       <img class="page-image" src="src/11.jpg" alt="Resume Page 12" />
-       <img class="page-image" src="src/12.jpg" alt="Resume Page 13" />
-       <img class="page-image" src="src/13.jpg" alt="Resume Page 14" />
+        <h3>Full Resume (Scanned Pages)</h3>
+        <img class="page-image" src="src/0.jpg" alt="Resume Page 1" loading="lazy"/>
+        <img class="page-image" src="src/1.jpg" alt="Resume Page 2" loading="lazy"/>
+        <img class="page-image" src="src/2.jpg" alt="Resume Page 3" loading="lazy"/>
+        <img class="page-image" src="src/3.jpg" alt="Resume Page 4" loading="lazy"/>
+        <img class="page-image" src="src/4.jpg" alt="Resume Page 5" loading="lazy"/>
+        <img class="page-image" src="src/5.jpg" alt="Resume Page 6" loading="lazy"/>
+        <img class="page-image" src="src/6.jpg" alt="Resume Page 7" loading="lazy"/>
+        <img class="page-image" src="src/7.jpg" alt="Resume Page 8" loading="lazy"/>
+        <img class="page-image" src="src/8.jpg" alt="Resume Page 9" loading="lazy"/>
+        <img class="page-image" src="src/9.jpg" alt="Resume Page 10" loading="lazy"/>
+        <img class="page-image" src="src/10.jpg" alt="Resume Page 11" loading="lazy"/>
+        <img class="page-image" src="src/11.jpg" alt="Resume Page 12" loading="lazy"/>
+        <img class="page-image" src="src/12.jpg" alt="Resume Page 13" loading="lazy"/>
+        <img class="page-image" src="src/13.jpg" alt="Resume Page 14" loading="lazy"/>
       </div>
 
       <div class="footer">
-        <small>
-      © Rahul Reddy — Cricket Résumé..
-        </small>
+        <small>© Rahul Reddy — Cricket Résumé</small>
       </div>
     </section>
   </main>
+
+  <!-- Back to top button -->
+  <button id="backToTop">↑</button>
+
+  <script>
+    const backToTop = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 400) {
+        backToTop.style.display = 'block';
+      } else {
+        backToTop.style.display = 'none';
+      }
+    });
+    backToTop.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
